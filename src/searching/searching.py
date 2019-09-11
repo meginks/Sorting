@@ -11,13 +11,16 @@ def binary_search(arr, target):
 
   if len(arr) == 0:
     return -1 # array empty
-    
   low = 0
   high = len(arr)-1
-
-  # TO-DO: add missing code
-
-  return -1 # not found
+  middle = (low + high) // 2 
+  for i in range(len(arr)):
+    if arr[i] == arr[middle]: 
+      return i
+    elif arr[i] < arr[middle]: 
+      high = middle 
+      if arr[i] < arr[middle]: 
+        return -1 # not found
 
 
 # STRETCH: write a recursive implementation of Binary Search 
